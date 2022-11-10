@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS clientes_banco
 (
     codigo    SERIAL PRIMARY KEY,
-    dni       INT UNIQUE NOT NULL,
+    dni       INT UNIQUE NOT NULL CHECK ( dni > 0 ),
     telefono  VARCHAR,
     nombre    VARCHAR NOT NULL,
     direccion VARCHAR
